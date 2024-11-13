@@ -1,55 +1,57 @@
-import React from 'react'
-import { IoIosMenu,IoIosClose } from  "react-icons/io";
-import {useState} from "react"
+import React, { useState } from "react";
+import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import "../app/styles/navbar.css"; // Import the custom CSS
+import Link from "next/link";
 
 
 const Navbar = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const toggleMenu = () =>{
-    setIsMenuOpen(!isMenuOpen)
-  }
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
-    <div className='container pt-8'>
-        <div className='flex justify-between items-center'>
-            <div className='text-xl font-medium'>Zainab bibi </div>
-            <ul className='gap-10 lg:gap-16 hidden md:flex'>
-              <li className='menulink'><a href="/">Home</a></li>
-              <li className='menulink'><a href="/about">About</a></li>
-              <li className='menulink'><a href="/skills">Skills</a></li>
-              <li className='menulink'><a href="/contact">Contact</a></li>
-              </ul>
-              <div className='md:hidden' onClick={toggleMenu}>
-                {isMenuOpen ? <IoIosClose size={30} />:
-                <IoIosClose size={30} />
+    <div className="navbar-container">
+      <div className="navbar-header">
+        <div className="navbar-logo">Zainab bibi</div>
+        <ul className={`navbar-links ${isMenuOpen ? 'menu-open' : ''}`}>
+          <li className="navbar-link">
+            <Link href="/">Home</Link>
+          </li>
+          <li className="navbar-link">
+            <Link href="#about">About</Link>
+          </li>
+          <li className="navbar-link">
+            <Link href="#skills">Skills</Link>
+          </li>
+          <li className="navbar-link">
+            <Link href="#contact">Contact</Link>
+          </li>
+        </ul>
+        <div className="navbar-toggle" onClick={toggleMenu}>
+          {isMenuOpen ? <AiOutlineClose size={30} /> : <AiOutlineMenu size={30} />}
+        </div>
+      </div>
 
-                }
-              </div>
-              </div>
-
-              {isMenuOpen && (
-              <ul className='flex flex-col gap mt-4 md:hidden'>
-                <li>
-                  <a href="#hero" onClick={toggleMenu}>Home</a>
-                </li>
-                <li>
-                  <a href="/about" onClick={toggleMenu}>About</a>
-                </li>
-                <li>
-                  <a href="/skills" onClick={toggleMenu}>Skills</a>
-                </li>
-      
-                <li>
-                  <a href="/contact" onClick={toggleMenu}>Contact</a>
-                </li>
-                
-
-              </ul>
-
-              )
-              }
+      {isMenuOpen && (
+        <ul className="navbar-mobile-links">
+          <li className="navbar-link">
+            <Link href="/" onClick={toggleMenu}>Home</Link>
+          </li>
+          <li className="navbar-link">
+            <Link href="#about" onClick={toggleMenu}>About</Link>
+          </li>
+          <li className="navbar-link">
+            <Link href="#skills" onClick={toggleMenu}>Skills</Link>
+          </li>
+          <li className="navbar-link">
+            <Link href="#contact" onClick={toggleMenu}>Contact</Link>
+          </li>
+        </ul>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

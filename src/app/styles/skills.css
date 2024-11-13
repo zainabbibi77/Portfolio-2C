@@ -1,0 +1,82 @@
+/*skills component css*/
+  
+/* General container styles */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 3rem;
+  }
+  
+  /* Skills grid layout */
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  @media (min-width: 768px) {
+    .skills-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  /* Heading styles */
+  .heading {
+    font-size: 3rem;
+    font-weight: 600;
+  }
+  
+  @media (min-width: 768px) {
+    .heading {
+      font-size: 4rem;
+    }
+  }
+  
+  /* Description styles */
+  .description {
+    font-size: 1.125rem;
+    color: #D1D5DB; /* Light gray */
+    padding-top: 1rem;
+  }
+  
+  /* Skills list styles */
+  .skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  /* Skill column styling */
+  .skill-column h2 {
+    font-size: 1.5rem;
+    color: white; /* Darker gray */
+    margin-bottom: 0.75rem;
+  }
+  
+  .skill-column h2:hover {
+    color: #10B981; /* Green accent color */
+  }
+  
+  /* AOS (Animate On Scroll) styles for animations */
+  [data-aos="zoom-in-up"] {
+    animation: zoomInUp 1s ease-in-out;
+  }
+  
+  @keyframes zoomInUp {
+    0% {
+      transform: scale(0.9) translateY(20px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  
+  
+     

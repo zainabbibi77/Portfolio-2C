@@ -1,25 +1,25 @@
-import React from 'react'
-import Navbar from './Navbar'
+import React from 'react';
+import Navbar from './Navbar';
+import "../app/styles/hero.css" ; // Import the custom CSS file
 
-
-const Hero= () => {
+const Hero = () => {
   return (
-    <div id="hero" className='min-h-screen bg-no-repeat bg-[url(/Bann2.png)] bg-cover '
-      style={{backgroundSize:"25%" ,backgroundPosition: "left 150px top 220px"}}>
-        <Navbar/>
-        <div className='container grid lg:grid-cols-2 h-[calc(100vh-60px)]'>
-          <div className='hidden lg:block'></div>
-          <div className='text-[100px] sm:text-[130px] font-bold leading-tight flex justify-center items-center'>
-            <div>
-              <p >That's me,</p>
-              <p >Zainab</p>
-              <p >Bibi</p>
-            </div>
+    <div id="hero"  className="hero-container"
+    >
+      <Navbar />
+      <div className="hero-content">
+        <div className='hidden lg:block'></div>
+
+        <div className="hero-text">
+          <div className="hero-main">
+            <p>That's me,</p>
+            <p>Zainab</p>
+            <p>Bibi</p>
           </div>
         </div>
       </div>
+    </div>
   )
 }
 
-export default Hero 
- 
+export default Hero

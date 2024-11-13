@@ -1,0 +1,12 @@
+*footer Css*/
+/* Footer.css */
+
+.footer {
+  margin-top: 4rem;
+  padding: 4rem 0;
+  text-align: center;
+  background-color:  #64748b;; /* Slate background */
+  color: #fff;
+  font-size: 1rem;
+}
+  
