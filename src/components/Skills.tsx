@@ -8,7 +8,7 @@ const Skills = () => {
         <div data-aos="zoom-in-up" className='skills-text'>
           <h2 className='heading'>Technical Skills</h2>
           <p className='description'>
-            As a skilled web developer, I excel in HTML, CSS, Javascript, React, and Next.js. I craft dynamic, user-friendly applications and stay updated with emerging technologies to drive efficiency.
+          As a skilled web developer, I excel in HTML, CSS, JavaScript, React, and Next.js. I specialize in crafting dynamic, user-friendly applications while staying up-to-date with emerging technologies to drive efficiency.
           </p>
         </div>
         <div className='skills-list'>
