@@ -1,11 +1,12 @@
 /* hero component code  /* Hero Component Styles */
 .hero-container {
-    min-height: 100vh;
-    background-image: url('/images/Banner2.png');
-    background-repeat: no-repeat;
-    background-size: 25%;
-    background-position: left 160px top 240px;
-  }
+  min-height: 100vh;
+  background-image: url('/images/Banner2.png'); /* Make sure the image is in the 'public/images' directory */
+  background-repeat: no-repeat;
+  background-size: 25%;
+  background-position: left 160px top 240px;
+}
+
   
   .hero-content {
     display: grid;
